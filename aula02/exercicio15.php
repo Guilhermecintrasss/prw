@@ -7,6 +7,6 @@ $y = explode(" ",$linha2);
 $total = (($y[1] - $x[0]) * ($y[1] - $x[0]) + 
 ($x[1] - $y[0]) * ($x[1] - $y[0]));
 
-$totalf = numberformat(sqrt(float $total): float,4,".","");
+$totalf = numberformat(sqrt($total),4,".","");
 echo "$totalf";
 ?>
