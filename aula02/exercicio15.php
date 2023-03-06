@@ -1,12 +1,13 @@
 <?php 
-$linha1 = ("1.0 7.0");
-$linha2 = ("5.0 9.0");
+$linha1 = (readline());
+$linha2 = (readline());
 $x = explode(" ",$linha1);
 $y = explode(" ",$linha2);
 
 $total = (($y[1] - $x[0]) * ($y[1] - $x[0]) + 
 ($x[1] - $y[0]) * ($x[1] - $y[0]));
 
-$totalf = numberformat(sqrt($total),4,".","");
-echo "$totalf";
+$totalf = number_format(sqrt(($y[1] - $x[1]) * ($y[1] - $x[1]) + 
+($x[0] - $y[0]) * ($x[0] - $y[0])),4,".","");
+echo "$totalf\n";
 ?>
