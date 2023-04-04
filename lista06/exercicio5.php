@@ -1,30 +1,14 @@
-
-<?php 
-
-$i=0;
-$c=0;
-$f=0;
-$x= intval(readline());
-while($i < $x) {
-
-    $num[$i] = intval(fgets(STDIN));
-    while ($num[$i] != ($c-1)) {
-
-        if ($c == 0){
-           $fibo[$c] = 0; 
-        } else {
-            if ($c == 1) {
-                $fibo[$c] = 1;
-            } else{
-                $fibo[$c] = $fibo[$c-1] + $fibo[$c-2];
-            }
-        }
-        $c++;
+<?php  
+    $fib[0]=0;
+    $fib[1]=1;
+    for($i=2;$i <= 60; $i++ ){
+        $fib[$i] =$fib[$i-2]   + $fib[$i -1];
     }
-    
-    echo "Fib(".$num[$i].") = ".$fibo[$c];
-
-    $i++;
-}
-
+    $i=0;
+    $x= intval(readline());
+    while($i < $x) {
+        $num = intval(trim(fgets(STDIN)));
+        echo "Fib(".$num.") = ".$fib[$num]."\n";
+        $i++;
+    }
 ?>
