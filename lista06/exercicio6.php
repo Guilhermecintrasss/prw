@@ -1,12 +1,10 @@
 <?php
-$v = readline();
-$x = $v;
-for($i=0;$i<1000;$i++) {
-    $x--;
-   $n[$i] = $x;
-   echo "N[$i] = $x\n";
-   if ($x == 0) {
-    $x = $v;
-   }
-}
+  $x = readline();
+
+  $n = array();
+
+  for ($i = 0; $i < 1000; $i++) {
+    $n[$i] = $i % $x;
+    echo "N[$i] = " . $n[$i] . "\n";
+  }
 ?>

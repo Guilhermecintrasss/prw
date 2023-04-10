@@ -1,48 +1,40 @@
-<?php 
+<?php
+$a = intval(readline());
 
-    $linha = "9 99999999999999999999999999999999999999999999999";//readline();
-    $val = explode(" ",$linha);
-
-    //while(true)
-    {
-        //$linha = readline();
-        //$val = explode(" ",$linha);
-        if($val[0] == "0" && $val[1] == "0")
-        {
-           // break;
+while($a>0){
+    $p = trim(readline());
+    $a--;
+    $n= '0';
+    $x = '0';
+    $t = '0';
+    $l = '0';
+    
+    while($x<(strlen($p))){
+        $n = intval(ord($p[$x]));
+        if(($n>=97 && $n<=122) || ($n>=65 && $n<=90) ){
+            $n += 3;
         }
-        $num = $val[1];
-        $erro = $val[0];
-        $i = 0;
-        $numc = ""; //Declarando a string vazia        
-
-        while ($i<strlen($num)) //strlen:conta quantas letras tem a string
-        {
-            if($num[$i] != $erro)
-            {        
-                $numc .= $num[$i];
-                //$numc = $numc . $num[$i];
-                //Estou somando duas strings, uma vazia com a outra
-            }
-            $i++;
-        }
-        if(intval($numc) == 0)
-            echo intval($numc)."\n";
-        else
-            echo $numc."\n";
+        $p[$x] = chr($n);
+        $x++;
     }
-/*
-$c = 0;
-while ($c<strlen($num)) {
-    if ($numc[$c] == 0){
-        if ($numc[$c+1] == 0) {
-
-        } else {
-            $numfi[$c] = $numc[$c];
-        }
-    } else {
-        $numfi[$c] = $numc[$c];
+    $f = "";
+    
+ $f = strrev($p);
+    $l = intval(intval((strlen($f)/2)*100)/100);
+    
+    while($l<(strlen($f))){
+        $t = ord($f[$l]);
+        $t -= 1;
+        $f[$l] = chr($t);
+        $l++;
     }
+    echo "$f\n";
 }
-*/
+//$numc = ""; Declarando a string vazia        
+
+//strlen:conta quantas letras tem a string
+    
+//$numc = $numc . $num[$i];
+//Estou somando duas strings, uma vazia com a outra
+
 ?>

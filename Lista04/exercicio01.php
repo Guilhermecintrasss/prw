@@ -1,27 +1,15 @@
-<?php 
-$linha = readline();
-$num = explode(" ",$linha);
-$X =  $num[0];
-$Y = $num[1];
-$n = 0;
-if ((1<$X) and ($X<20)){
+<?php
+$n = explode(' ', readline());
+$X = floatval($n[0]);
+$Y = floatval($n[1]);
 
-while ($n < $Y) {
-  $n = $n+1;
-  
-  if ($n == $Y){ 
-  echo "$n\n";
-} else {
-  if (($n%$X) === 0) {
-    echo "$n";
-  }else{ 
-    echo "$n ";
-  }
+for($i=1; $i<=$Y; $i++){
+    echo $i;
+    if(($i%$X)==0){
+        echo "\n";
+    } else {
+        echo " ";
+    }
 }
-  if (($n%$X) === 0)
-  {
-    echo "\n";
-  }
-}
-}
+
 ?>
