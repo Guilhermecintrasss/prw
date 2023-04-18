@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Action: Qual arquivo ele chamara, no caso ele será conecato com o form em php
+    serve como um link entre 2 arquivos(php e html)-->
+    <!--method é o tipo de requesição http: separa em get ou post-->  
+    <h1>Cadastro de aluno</h1>
+    <form action="form.php" method="post"> 
+        <div>
+            <!--O Label vai ser o nome que vai aparecer na frente da caixa de texto-->
+            <!--O for serve como um identificador, que vai ter o mesmo valor da caixa
+            ou seja, quando o label "Nome" for clicado, vai abrir a caixa de texto,
+            assim, mesmo ele nao clicando direto na caixa de texto, ela abre pra escrita-->
+
+            <!-- o Imput é a caixa de texto em si, o type dela é o tipo de valor que
+            nela vai ser inserido, o "name" vai ser a identificação na parte do backend, ou seja
+            como o valor vai ser chamado, e o ID vai ser o identificador da caixa de texto, 
+            que serve para se direcionar até essa caixa de texto-->
+            <label for="bv">Nome</label> 
+            <input type="text" name="nome" id="bv">
+            
+        </div>
+        <div>
+            <label for="idade">Idade</label>
+            <input type="number" name="idade">
+        </div>
+        <div>
+        <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>
