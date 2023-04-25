@@ -3,7 +3,7 @@ $ida = $_POST['idade'];
 $av = $_POST['av'];
 $livro = $_POST['livro'];
 $ge = $_POST['genero'];
-$op = $_POST['opiao'];
+$op = $_POST['opniao'];
 
 if($ida=18){
     echo "<h1>A avaliação do Livro $livro, do genero $ge,+18, foi feita</h1><br>";
