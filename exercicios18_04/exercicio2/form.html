@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Insira os valores </h1>
+    <l>____________________________________________</l><br>
+    <form action="form.php" method="post">
+        <label for="livro">Livro: </label> 
+        <input type="text" name="livro"><br>
+
+        <SELECT name = "genero">
+            <option value="aventura">Aventura</option>
+            <option value="romance">Romance</option>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Fantasia">Fantasia</option>
+        </SELECT>
+        <input type="checkbox" name="idade" value="18">
+        <label for="idade">+18</label><br>
+
+        <input type="radio" name="av" value="gostei">
+        <label for="av">Gostei</label> 
+        <input type="radio" name="av" value="+ ou -">
+        <label for="av">Mais ou menos</label> 
+        <input type="radio" name="av" value="ruim">
+        <label for="av">Ruim</label> 
+
+
+        <h3> Nos conte mais sobre o livro</h3>
+        <textarea name="opniao" rows="10" colons="33" maxlength="200" placeholder="Insira sua opnião"></textarea><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
